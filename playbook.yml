@@ -13,6 +13,9 @@
     shell: gsettings set org.gnome.shell favorite-apps "[]"
     become_user: vagrant
     ignore_errors: yes
+  - name: Run update
+    shell: apt-get update
+    ignore_errors: yes
             
   roles:
     - role: keyboard

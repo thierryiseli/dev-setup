@@ -8,7 +8,6 @@
 - src: https://github.com/gantsign/ansible-role-maven.git
   name: maven
   
-  
 - src: https://github.com/gantsign/ansible-role-intellij.git
   name: intellij
 
