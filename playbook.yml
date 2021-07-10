@@ -4,15 +4,11 @@
   vars:
     intellij_version: '2021.1.1'
     intellij_redis_sha256sum:  c17a4755ebbd6e459924f56b3a20aea09151adb66b647e8c241b78a67baf045f
-    keyboard_layout: ch
-    keyboard_variant: de
+    keyboard_layout: de
+    keyboard_variant: ch
     reboot_always: yes
 
   pre_tasks:
-  - name: Remove all desktop favourites
-    shell: gsettings set org.gnome.shell favorite-apps "[]"
-    become_user: vagrant
-    ignore_errors: yes
   - name: Run update
     shell: apt-get update
     ignore_errors: yes
