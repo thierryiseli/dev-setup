@@ -72,5 +72,5 @@ Vagrant.configure(2) do |config|
       "GIT_PASSWORD" => userInput.getPassword(),
       "GIT_NAME" => userInput.getUsername(),
       "GIT_EMAIL" => userInput.getEmail(),
-                      :privileged => false, :path => "startAnsible.sh"
+                      :privileged => false, :path => "startAnsible.sh" }
 end
