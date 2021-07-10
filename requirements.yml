@@ -1,0 +1,15 @@
+---
+- src: https://github.com/gantsign/ansible-role-maven.git
+  name: maven
+
+- src: https://github.com/gantsign/ansible-role-intellij.git
+  name: intellij
+
+- src: https://github.com/robertdebock/ansible-role-npm.git
+  name: npm
+
+- src: https://github.com/nickjj/ansible-docker.git
+  name: docker
+
+- src: https://github.com/robertdebock/ansible-role-reboot.git
+  name: reboot  
