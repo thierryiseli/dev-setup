@@ -4,17 +4,21 @@
   vars:
     intellij_version: '2021.1.1'
     intellij_redis_sha256sum:  c17a4755ebbd6e459924f56b3a20aea09151adb66b647e8c241b78a67baf045f
-    keyboard_layout: de
-    keyboard_variant: ch
+    keyboard_layout: ch
     reboot_always: yes
 
   pre_tasks:
   - name: Run update
     shell: apt-get update
     ignore_errors: yes
-            
+  - name: Set keyboard layout
+    shell: localectl set-x11-keymap {{ keyboard_layout }}
+  - name: Ensure keyboard layout in dconf
+    shell: dconf write /org/gnome/desktop/input-sources/sources "[('xkb', '{{ keyboard_layout }}')]" 
+    become: false
+    ignore_errors: yes
+                
   roles:
-    - role: keyboard
     - role: java
     - role: maven
     - role: intellij

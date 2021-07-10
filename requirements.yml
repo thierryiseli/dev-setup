@@ -1,7 +1,4 @@
 ---
-- src: https://github.com/gantsign/ansible-role-keyboard.git
-  name: keyboard
-
 - src: https://github.com/gantsign/ansible-role-java.git
   name: java
   
