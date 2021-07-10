@@ -45,7 +45,7 @@ Vagrant.configure(2) do |config|
 
   userInput = UserInput.new
   
-  config.vm.box = "thierryiseli/ubuntu-20.04-desktop
+  config.vm.box = "thierryiseli/ubuntu-20.04-desktop"
   config.ssh.username = "vagrant"
   config.ssh.password = "vagrant"
 
