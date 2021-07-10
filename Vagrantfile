@@ -48,6 +48,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "thierryiseli/ubuntu-20.04-desktop"
   config.ssh.username = "vagrant"
   config.ssh.password = "vagrant"
+  config.vm.synced_folder '.', '/vagrant', disabled: true
 
   if File.exist?(Dir.pwd + "//.vagrant")
     FileUtils.rm_rf(Dir.pwd + "//.vagrant")
@@ -71,6 +72,6 @@ Vagrant.configure(2) do |config|
       "GIT_USERNAME" => userInput.getUsername(),
       "GIT_PASSWORD" => userInput.getPassword(),
       "GIT_NAME" => userInput.getUsername(),
-      "GIT_EMAIL" => userInput.getEmail(),
-                      :privileged => false, :path => "startAnsible.sh" }
+      "GIT_EMAIL" => userInput.getEmail()},
+                      :privileged => false, :path => "startAnsible.sh"
 end
